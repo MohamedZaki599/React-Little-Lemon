@@ -1,7 +1,17 @@
-import React from "react"
+import React from 'react';
+import BookingForm from './BookingForm';
 
-function Booking() {
-	return <div></div>
-}
+const Booking = ({ availableTimes, dispatch, submitForm }) => {
+    return (
+        <div>
+            <h1>Booking</h1>
+            <BookingForm 
+                availableTimes={availableTimes} 
+                dispatch={dispatch} 
+                submitForm={submitForm} 
+            />
+        </div>
+    );
+};
 
-export default Booking
+export default Booking;
