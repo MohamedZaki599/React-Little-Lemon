@@ -1,14 +1,13 @@
 import React from "react"
 import Logo from "../assets/Logo.svg"
 const Nav = () => {
+	const [menuOpen, setMenuOpen] = React.useState(false)
 
-  const [menuOpen, setMenuOpen] = React.useState(false);
+	const toggleMenu = () => {
+		setMenuOpen(!menuOpen)
+	}
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  }
-
-  return (
+	return (
 		<nav className={`navbar ${menuOpen ? "open" : ""}`}>
 			<a href="/" className="logo">
 				<img src={Logo} alt="Little Lemon Logo" />
@@ -27,22 +26,16 @@ const Nav = () => {
 					<a href="/">Home</a>
 				</li>
 				<li>
-					<a href="/about">About</a>
+					<a href="#footer">About</a>
 				</li>
 				<li>
-					<a href="/services">Services</a>
-				</li>
-				<li>
-					<a href="/menu">Menu</a>
+					<a href="#menu">Menu</a>
 				</li>
 				<li>
 					<a href="/booking">Reservations</a>
 				</li>
 				<li>
 					<a href="/order">Order</a>
-				</li>
-				<li>
-					<a href="/login">Login</a>
 				</li>
 			</ul>
 		</nav>

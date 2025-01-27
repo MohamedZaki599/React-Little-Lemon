@@ -75,7 +75,13 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
 							<option value="Anniversary">Anniversary</option>
 						</select>
 					</div>
-					<button type="submit">Reserve Now</button>
+					<div className="btnReceive">
+						<input
+							aria-label="On Click"
+							type="submit"
+							value={"Make Your Reservation"}
+						/>
+					</div>
 				</fieldset>
 			</form>
 		</section>

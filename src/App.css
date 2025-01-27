@@ -3,6 +3,16 @@ body {
 	margin: 0 auto;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 li {
 	list-style: none;
 }
@@ -152,10 +162,24 @@ label {
 	color: #fff;
 	border: none;
 	border-radius: 4px;
+	cursor: pointer;
+}
+
+.btnReceive input:hover {
+	background: #f4ce14;
+	color: #000;
 }
 
 .comfirm span {
 	color: blue;
+}
+
+.comfirm p {
+	color: rgb(32, 70, 209);
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 1.5;
+	margin-bottom: 30px;
 }
 
 /* menu items */
@@ -186,9 +210,38 @@ label {
 
 .menu-items {
 	/* height: 400px; */
-	width: 350px;
+	width: 300px;
+	margin: 20px 0;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	background: #a9c8be;
 	border-radius: 8px;
+}
+
+@media screen and (max-width: 1024px) {
+	.menu-items {
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.menu-items {
+		width: 100%;
+	}
+}
+
+.menu-items img {
+	width: 100%;
+	height: 233px;
+	border-radius: 8px;
+}
+
+.menu-content {
+	padding: 5px 15px;
+}
+
+.menu-content .heading {
+	display: flex;
+	justify-content: space-between;
 }
 
 .menu-container img {
@@ -206,11 +259,32 @@ label {
 	justify-content: space-between;
 }
 
-.orderbtn {
-	padding: 5px 12px;
-	margin-bottom: 20px;
-	font-size: 16px;
+.menu-content h3 {
+	font-size: 20px;
 	font-weight: 600;
+}
+
+.menu-content p {
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.orderbtn {
+	padding: 15px 12px;
+	margin-bottom: 20px;
+	width: 100%;
+	font-size: 16px;
+	background: var(--secondaryColor);
+	color: black;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.orderbtn:hover {
+	background: var(--primaryColor);
+	color: #fff;
 }
 
 footer section {
@@ -218,20 +292,29 @@ footer section {
 	display: flex;
 	justify-content: space-between;
 	align-items: start;
+	background-color: var(--primaryColor);
 }
 
-.company-info img {
-	margin-top: 12px;
-	cursor: pointer;
-	width: 200px;
+footer .company-info img {
+	width: 150px;
+	height: 261px;
+	border-radius: 8px;
+	margin-bottom: 12px;
 }
 
 .company-info p {
 	width: 320px;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #fff;
+	margin-top: 12px;
 }
 
 footer h3 {
 	font-size: 18px;
+	font-weight: 600;
+	color: #fff;
+	margin-bottom: 12px;
 }
 
 footer ul {
@@ -240,6 +323,16 @@ footer ul {
 
 footer ul li {
 	padding: 8px 0;
+	list-style: none;
+	font-size: 16px;
+}
+
+footer ul li a {
+	text-decoration: none;
+}
+
+footer ul li a:hover {
+	color: var(--primaryColor);
 }
 
 @media screen and (max-width: 768px) {
@@ -306,4 +399,40 @@ footer ul li {
 
 .hidden {
 	display: none;
+}
+
+.navigation-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-right: 30px;
+}
+
+.navigation-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.navigation-links a:hover {
+  color: var(--secondaryColor);
+}
+
+.contact-info ul li {
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	margin-bottom: 1em;
+}
+
+.contact-info ul li span {
+	color: white;
+}
+
+.social-media-links a {
+	color: white;
+}
+
+.social-media-links a:hover {
+	color: var(--secondaryColor);
 }
